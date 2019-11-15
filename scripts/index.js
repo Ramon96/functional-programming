@@ -1,7 +1,9 @@
 // I build this with the use of curran kelleher tutorials
 // https://www.youtube.com/watch?v=Qw6uAg3EO64&t=1s
+// I used laurens example to make the legend
+// https://vizhub.com/Razpudding/921ee6d44b634067a2649f738b6a3a6e
 
-import { select, json, tsv, geoPath, geoNaturalEarth1, zoom, event, scale, legend } from "d3";
+import { select, json, tsv, geoPath, geoNaturalEarth1, zoom, event } from "d3";
 import { feature } from 'topojson';
 import { getQuery } from './getData.js';
 
