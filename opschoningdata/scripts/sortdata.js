@@ -10,19 +10,11 @@ function stringToArray(string){
 function fixCoordinates(geo){
   const newData = geo.map(item => {
     if(!isNumber(item)){
-      if(item.startsWith("(")){
-        //dit haalt de haakjes weg van de item
-        return item.replace(/[()]/g, "");
-      }
+        return removeBrackets(item);
       }
       if(item.includes("°")){
         // Als je in deze if statement komt dan is het item in DMS formaat genoteerd
-        let dms = item.split(/[^\d\w\.]+/);
-        let lat = convertDMS(dms[0], dms[1], dms[2], dms[3]);
-        let long = convertDMS(dms[4], dms[5], dms[6], dms[7]);
-        // Door de kracht van javascript word door latlong een string omdat de komma ook als een string geconcat word
-        const latlong = lat + "," +  long;
-        return latlong;
+        return convertDMS(item)
       }
       if(isNumber(item) && !item.includes("°")){
         // als het niet in dms formaat is en als het een getal is dan is hij gewoon goed.
@@ -32,8 +24,23 @@ function fixCoordinates(geo){
 
   return newData;
 }
-//Deze functie zet het dms formaat om naar een decimal formaat
-function convertDMS(degree, minute, second, direction){
+
+function removeBrackets(item){
+  if(item.startsWith("(")){
+    return item.replace(/[()]/g, "");
+  }
+}
+
+function convertDMS(item){
+      let dms = item.split(/[^\d\w\.]+/);
+      let lat = calculateDMS(dms[0], dms[1], dms[2], dms[3]);
+      let long = calculateDMS(dms[4], dms[5], dms[6], dms[7]);
+      const latlong = lat + "," +  long;
+      return latlong;
+}
+
+//Deze functie rekend het dms formaat om naar een decimal formaat
+function calculateDMS(degree, minute, second, direction){
   //deze functie heb ik helaas niet zelf bedacht en heb ik af moeten kijken op stack overflow
 // https://stackoverflow.com/questions/1140189/converting-latitude-and-longitude-to-decimal-values
   let decimal =  Number(degree) + Number(minute)/60 + Number(second)/(60*60);
