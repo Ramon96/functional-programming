@@ -3,6 +3,7 @@
 
 # Description
 During this course I created a data visualisation with the help of VizHub. Building this project Data of the NMVW was used.
+This project is made with [D3](https://d3js.org/)
 
 # Installation
 You want to clone this project to a local folder using the following code. 
