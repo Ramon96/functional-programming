@@ -1,3 +1,6 @@
+// I build this with the use of curran kelleher tutorials
+// https://www.youtube.com/watch?v=Qw6uAg3EO64&t=1s
+
 import { select, json, tsv, geoPath, geoNaturalEarth1, zoom, event, scale, legend } from "d3";
 import { feature } from 'topojson';
 import { getQuery } from './getData.js';
