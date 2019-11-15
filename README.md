@@ -5,6 +5,9 @@
 During this course I created a data visualisation with the help of VizHub. Building this project Data of the NMVW was used.
 This project is made with [D3](https://d3js.org/)
 
+# Target Audience
+This visualisation was build in mind for someone to find pattern's in the data. This could easily be replaced with another subject to get a better understanding of the collection. This would benefit someone like Rik.
+
 # Installation
 You want to clone this project to a local folder using the following code. 
 `https://github.com/Ramon96/functional-programming.git`
@@ -33,6 +36,9 @@ Please check out my [Wiki](https://github.com/Ramon96/functional-programming/wik
 # Credits
  * Tomas Stolp (Helping me understand how to handle returned data)
  * Laurens Aarnoudse (Providing alot of usefull example's)
+ 
+ # Data
+ The data used in this project is data acuired from the NMVW database collection with the use of Sparql.
 
 # License
 [MIT @ Ramon Meijers](https://github.com/Ramon96/functional-programming/blob/master/LICENSE)
