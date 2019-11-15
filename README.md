@@ -1,5 +1,5 @@
 # Functional Programming
-
+[Maskers op functie](https://github.com/Ramon96/functional-programming/blob/master/documentation/project.png?raw=true)
 
 # Description
 During this course I created a data visualisation with the help of VizHub. Building this project Data of the NMVW was used.
