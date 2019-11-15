@@ -1,4 +1,4 @@
-import { select, json, tsv, geoPath, geoMercator, zoom, event, scale, legend } from "d3";
+import { select, json, tsv, geoPath, geoNaturalEarth1, zoom, event, scale, legend } from "d3";
 import { feature } from 'topojson';
 import { getQuery } from './getData.js';
 
@@ -31,7 +31,7 @@ getQuery(url, query).then(data => {
 
 function init(places){
 const svg = select('svg');
-const projection = geoMercator();
+const projection = geoNaturalEarth1();
 const pathGenerator = geoPath().projection(projection);
 const g = svg.append('g');
   

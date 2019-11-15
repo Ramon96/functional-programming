@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   overflow: hidden;
-  background-color: black;
+  background-color: #232323;
 }
 
 body:hover{
@@ -19,7 +19,7 @@ body:hover{
 }
 
 .sphere{
-  fill: #00000;
+  fill: #161616;
 }
 
 
